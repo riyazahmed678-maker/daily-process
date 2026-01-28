@@ -111,3 +111,23 @@ Interview Date is NOT null
 Status is NOT equal to "Interviewing"
 Flow runs only when record is updated to meet conditions
 
+----------------------------Day 6-Completed-----------------------------------------------
+
+Day 6 – Salesforce Flow Automation (Recruitment Workflow)
+Implemented a production-style record-triggered Flow to automate Job Application status transitions based on real recruitment events.
+
+What was done
+Built a Record-Triggered Flow on the Job Application object
+Configured selective entry conditions so the flow runs only when:
+Interview Date is added, or
+Offer Date is added
+Used Decision elements to control valid status transitions:
+Applied → Interviewing (when Interview Date is populated)
+Interviewing → Offered (when Offer Date is populated)
+Ensured the flow exits safely when conditions are not met
+Prevented unnecessary executions and infinite loops by validating current status
+Why this matters
+This automation removes manual dependency on recruiters to update application status, improves data accuracy, and reflects a real-world recruitment lifecycle instead of demo-level automation.
+
+Key learning
+Effective Salesforce automation should be event-driven, selective, and controlled. Status changes should be driven by meaningful business actions, not by every record edit.
